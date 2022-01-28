@@ -1,2 +1,3 @@
 # race-sample-app
-App demo mvvm and connected yelp
+App demo mvvm and connected yelp !
+ 
