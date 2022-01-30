@@ -19,9 +19,11 @@ class BusinessUseCaseImpl @Inject constructor(
         long: Double?
     ): Result<List<BusinessModel>> {
         val sortBy = if (sortType == SortType.DISTANCE) DISTANCE else RATING
+        val location = if (lat == null || long == null) "SF" else null
         return when (searchType) {
             SearchType.NAME -> repository.getBusiness(
                 name = key,
+                address = location,
                 lat = lat,
                 long = long,
                 sortBy = sortBy
@@ -34,11 +36,18 @@ class BusinessUseCaseImpl @Inject constructor(
             )
             SearchType.CATEGORIES -> repository.getBusiness(
                 categories = key,
+                address = location,
                 lat = lat,
                 long = long,
                 sortBy = sortBy
             )
-            else -> repository.getBusiness(name = key, lat = lat, long = long, sortBy = sortBy)
+            else -> repository.getBusiness(
+                name = key,
+                address = location,
+                lat = lat,
+                long = long,
+                sortBy = sortBy
+            )
         }
 
     }
