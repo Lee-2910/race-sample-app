@@ -1,5 +1,5 @@
-#race-sample-app application example with Android Architecture components and Clean Architecture
-App demo mvvm and connected yelp !
+### App demo mvvm and connected yelp !
+race-sample-app application example with Android Architecture components and Clean Architecture
 
 Race app that shows how to architect an android app in a clean architecture with kotlin
 coroutines. It simply shows a list of business that is fetched from Yelp
@@ -44,7 +44,7 @@ coroutines. It simply shows a list of business that is fetched from Yelp
 
 ### Glide
 
-* [Glide](hhttps://github.com/bumptech/glide) Glide is a fast and efficient open source media management 
+* [Glide](https://github.com/bumptech/glide) Glide is a fast and efficient open source media management 
   and image loading framework for Android that wraps media decoding, memory and disk caching, 
   and resource pooling into a simple and easy to use interface.
 
